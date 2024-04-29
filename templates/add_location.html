@@ -1,0 +1,21 @@
+<!-- locations/templates/locations/add_location.html -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Location</title>
+    <link rel="stylesheet" href="{% static 'css/location_styles.css' %}"> <!-- Link to external CSS -->
+    <script src="{% static 'js/location_interaction.js' %}"></script> <!-- Link to external JS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Add Location</h1>
+        <form method="post" class="location-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

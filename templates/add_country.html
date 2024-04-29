@@ -1,0 +1,23 @@
+<!-- locations/templates/locations/add_country.html -->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Country</title>
+    <link rel="stylesheet" href="{% static 'css/add_country.css' %}"> <!-- Link to external CSS -->
+    <script src="{% static 'js/main.js' %}"></script> <!-- Link to external JS for interactive elements -->
+</head>
+<body>
+    <div class="container">
+        <h1>Add Country</h1>
+        <form method="post" class="country-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

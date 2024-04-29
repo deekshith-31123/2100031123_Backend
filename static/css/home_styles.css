@@ -1,0 +1,48 @@
+
+/* static/css/home_styles.css */
+body {
+    font-family: 'Roboto', sans-serif; /* Readable and modern typography */
+    background: url('/static/images/home-bg.jpg') no-repeat center center fixed; /* Set a suitable background */
+    background-size: cover;
+    color: #ffffff; /* High contrast for readability */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* A fresh, inviting green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #367c39; /* Darker shade on hover */
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Addresses</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Locations</h1>
+    <table>
+        <tr>
+            <th>Location ID</th>
+            <th>Street Address</th>
+            <th>Postal Code</th>
+            <th>City</th>
+            <th>State/Province</th>
+            <th>Country ID</th>
+        </tr>
+        {% for location in locations %}
+        <tr>
+            <td>{{ location.location_id }}</td>
+            <td>{{ location.street_address }}</td>
+            <td>{{ location.postal_code }}</td>
+            <td>{{ location.city }}</td>
+            <td>{{ location.state_province }}</td>
+            <td>{{ location.country.country_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>All Countries</h1>
+    <table>
+        <tr>
+            <th>Country ID</th>
+            <th>Country Name</th>
+            <th>Region ID</th>
+        </tr>
+        {% for country in countries %}
+        <tr>
+            <td>{{ country.country_id }}</td>
+            <td>{{ country.country_name }}</td>
+            <td>{{ country.region_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

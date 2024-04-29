@@ -1,0 +1,54 @@
+<!-- locations/templates/locations/display_addresses.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canadian Addresses</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Locations (Using Join)</h1>
+    <table>
+        <tr>
+            <th>Location ID</th>
+            <th>Street Address</th>
+            <th>Postal Code</th>
+            <th>City</th>
+            <th>State/Province</th>
+            <th>Country Id</th>
+        </tr>
+        {% for address in addresses_with_join %}
+        <tr>
+            <td>{{ address.location_id }}</td>
+            <td>{{ address.street_address }}</td>
+            <td>{{ address.postal_code }}</td>
+            <td>{{ address.city }}</td>
+            <td>{{ address.state_province }}</td>
+            <td>{{ address.country__country_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Countries (No Join)</h1>
+    <table>
+        <tr>
+            <th>Country ID</th>
+            <th>Country Name</th>
+            <th>Region Id</th>
+
+        </tr>
+        {% for address in addresses_no_join %}
+        <tr>
+            <td>{{ address.country_id }}</td>
+            <td>{{ address.country_name }}</td>
+            <td>{{ address.region_id }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

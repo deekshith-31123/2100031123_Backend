@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'css/home_styles.css' %}">
+    <script src="{% static 'js/home_interaction.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our SaferTek</h1>
+        <div class="button-container">
+            <button onclick="location.href='{% url 'add_country' %}'">Add Country</button>
+            <button onclick="location.href='{% url 'add_location' %}'">Add Location</button>
+            <button onclick="location.href='{% url 'display_all' %}'">View Addresses</button>
+            <button onclick="location.href='{% url 'display_addresses' %}'">Canadian People </button>
+
+
+        </div>
+    </div>
+</body>
+</html>
