@@ -1,6 +1,3 @@
-![image](https://github.com/deekshith-31123/2100031123_Backend/assets/109582945/2ff290a1-7ec1-4eb4-91e6-d846bdf14297)# Safertek Backend Project
-
-
 
 ## Setup Instructions
 
